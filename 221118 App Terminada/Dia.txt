@@ -1,0 +1,35 @@
+
+
++-------------------+       +---------------------+       +---------------------+       +---------------------+
+|      Alumno       |       |       Profesor      |       |      Asignatura     |       |       Recibe        |
++-------------------+       +---------------------+       +---------------------+       +---------------------+
+| NumMatricula (PK) |       | IdProfesor (PK)     |       | CodAsignatura (PK)  |       | CursoEscolar        |
+| Nombre            |       | NIF_P               |       | Nombre              |       | NumMatricula (PK, FK)|
+| FechaNacimiento   |       | Nombre              |       | IdProfesor (FK)     |       | CodAsignatura (PK, FK)|
+| Telefono          |       | Especialidad        |       +---------------------+       +---------------------+
++-------------------+       | Telefono            |
+                            +---------------------+
+
+
+
+
++-----------------+         +-----------------+        +-----------------+
+|     Alumno      |         |    Profesor     |        |    Asignatura   |
++-----------------+         +-----------------+        +-----------------+
+| NumMatricula [PK]|         | IdProfesor [PK] |        | CodAsignatura [PK]|
+| Nombre          |         | NIF_P           |        | Nombre          |
+| FechaNacimiento |         | Nombre          |        | IdProfesor [FK]  |
+| Telefono        |         | Especialidad    |        +-----------------+
++-----------------+         | Telefono        |
+                             +-----------------+
+                                 | 
+                                 | 
+                                 |
+                              +--------------------------+
+                              |         Recibe           |
+                              +--------------------------+
+                              | CursoEscolar           |
+                              | NumMatricula [FK] (PK)  |
+                              | CodAsignatura [FK] (PK) |
+                              +--------------------------+
+
